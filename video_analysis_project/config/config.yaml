@@ -1,0 +1,33 @@
+video:
+  input_path: "videos/input/"
+  output_path: "output/"
+  supported_formats: [".mp4", ".avi", ".mov", ".mkv", ".wmv"]
+  frame_skip: 1  # Processar cada frame (1) ou pular frames
+
+analysis:
+  human_detection: true
+  pose_estimation: true
+  facial_analysis: true
+  behavior_analysis: true
+  object_detection: true
+  animal_detection: true
+  environment_analysis: true
+  medical_analysis: true
+  medical_settings:
+    analysis_detail_level: "comprehensive"
+    anatomical_regions: ["breast", "general"]
+    health_assessment: true
+    privacy_mode: true
+    medical_terminology: true
+    generate_recommendations: true
+
+models:
+  yolo_model: "yolov8n.pt"
+  pose_model: "mediapipe"
+  face_model: "dlib"
+  
+output:
+  generate_report: true
+  save_frames: true
+  create_visualizations: true
+  detailed_logging: true
